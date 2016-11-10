@@ -10,7 +10,7 @@
       com.sap.db.jdbc.Driver
    	</property>
    	<property name="hibernate.connection.url">
-      jdbc:sap://myhdb:30715/
+      jdbc:sap://sp12201.sfphcp.com:30015/
    	</property>
    	<property name="hibernate.connection.username">
       SYSTEM

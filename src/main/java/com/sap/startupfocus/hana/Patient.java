@@ -2,40 +2,42 @@ package com.sap.startupfocus.hana;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "PATIENT")
+@Table(name = "\"com.sap.startupfocus.hana.db::medical.patient\"")
 public class Patient {
-	   @Id
-	   @GeneratedValue
-	   @Column(name = "id")
-	   private int id;
+	@Id
+	@Column(name = ID)
+	private int id;
 
-	   @Column(name = "first_name")
-	   private String firstName;
+	@Column(name = FIRST_NAME)
+	private String firstName;
 
-	   @Column(name = "last_name")
-	   private String lastName;
+	@Column(name = LAST_NAME)
+	private String lastName;
 
-	   public int getId() {
-	      return id;
-	   }
-	   public void setId( int id ) {
-	      this.id = id;
-	   }
-	   public String getFirstName() {
-	      return firstName;
-	   }
-	   public void setFirstName( String first_name ) {
-	      this.firstName = first_name;
-	   }
-	   public String getLastName() {
-	      return lastName;
-	   }
-	   public void setLastName( String last_name ) {
-	      this.lastName = last_name;
-	   }
+	private final static String ID = "\"id\"";
+	private final static String FIRST_NAME = "\"first_name\"";
+	private final static String LAST_NAME = "\"last_name\"";
+	
+	public int getId() {
+		return id;
+	}
+	public void setId( int id ) {
+		this.id = id;
+	}
+	public String getFirstName() {
+		return firstName;
+	}
+	public void setFirstName( String first_name ) {
+		this.firstName = first_name;
+	}
+	public String getLastName() {
+	   return lastName;
+	}
+	public void setLastName( String last_name ) {
+		this.lastName = last_name;
+	}
 }

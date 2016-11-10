@@ -1,0 +1,12 @@
+namespace com.sap.startupfocus.hana.db;
+
+@Schema: 'SYSTEM'
+context medical {
+
+  entity patient {
+    key id: Integer;
+    first_name: String(100);
+    last_name: String(100);
+  };
+
+};
